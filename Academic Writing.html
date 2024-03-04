@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<Html lang="en">
+<meta charset="Utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  .expandable-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expandable-item {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.expandable-title {
+  padding: 10px;
+  background-color: #f3f3f3;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.expandable-content {
+  padding: 10px;
+  display: none;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.expandable-item.expanded .expandable-content {
+  display: block;
+}
+body{
+  background:no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+}
+nav {
+  background-color: #0d126e;
+  border: 15px;
+  border-radius: 20px ;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+  
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 19px;
+}
+
+nav ul li a {
+  color: #ffcf20;
+  text-decoration: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #ffffff;
+}
+.A1{
+  font-size: 30px;
+  color: rgb(102, 59, 151);
+}
+div .highlite{
+  color : #ffcf20
+}
+.A2{
+  width: 50%; /* Adjust the width as needed */
+  float: left; /* Float the paragraph to the left */
+  padding: 20px; /* Optional: Add padding for better readability */
+  box-sizing: border-box;
+ display: block;
+ font-size: 90px;
+ color: #0c116d;
+ font-family:fantasy ;
+}
+h1 .A0 {
+  color: rgb(102, 59, 151);
+  display: inline-block;
+}
+.moved-image{
+  width: 50%; /* Adjust the width of the image column */
+}
+.A2 p {
+  margin-bottom: 5px; 
+  margin-top: 5px;
+}
+.A3{
+  background-color: blue;
+  
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Your CSS rules for small screens */
+}
+
+/* Styles for screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+    /* Your CSS rules for medium screens */
+}
+
+/* Styles for screens larger than 901px */
+@media (min-width: 901px) {
+    /* Your CSS rules for large screens */
+}
+.A4{
+ font-size: 30px;
+ margin-left: 700px;
+}
+.A5{
+  margin-right: 1230px;
+}
+.title{
+  text-align: center;
+  color: red;
+}
+.list-1{
+  display:flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.exp-list-1{
+  color:brown;
+}
+.notes{
+  margin:0px;
+}
+.mal7osa{
+  display:flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.mal7osa-exp{
+  margin: 0px;
+  color:brown;
+}
+</style>
+<head>
+    <title>JUSTforHELP</title>
+</head>
+<body>
+  
+    <nav>
+         <ul>
+            <li class="A1"> <a href="Home.HTML"><i class="fa-solid fa-building-columns"></i></a></li>
+            <li><a href="Calculu I.html">Calculus I</a></li>
+            <li><a href="Academic Writing.html">Academic Writing</a></li>
+            <li><a href="Advanced Physics.html">Advanced Physics</a></li>
+            <li><a href="Problem Solving.html">Problem Solving</a></li>
+            <li><a href="Enterpreneurship S.html">Enterpreneurship S</a></li>
+            <li><a href="Discrete Structures.html">Discrete Structures</a></li>
+            <li class="A1"><a href="Thx For ur HELP.HTML"><i class="fa-solid fa-hand-holding-heart"></i></a></li>
+        </ul>
+    </nav>  
+    
+    <ul class="expandable-list">
+      <li class="expandable-item">
+        <div class="expandable-title">Lect 1</div>
+        <div class="expandable-content">
+          <h1 class="title">Writing Process</h1>
+          <h3 style="margin: 5px;"><strong>(1) Title</strong></h3>
+          <ul>
+            <ol>Must be concis <span style="color:brown;">"short and enough"</span></ol>
+            <ol>Reflects the content of topice</ol>
+            <ol>Not too general</ol>
+            <div class="list-1"> <ol>Narrow down your title</ol> <p class="exp-list-1">تحول الفكرة من عامة الى مخصصة</p></div>
+          </ul>
+          <h3 style="margin: 5px;"><strong>(2) Pre-Writing</strong></h3>
+          <ul>
+            <ol><strong>Listing : </strong> list all vocabs idea phrases about topic</ol>
+            <ol>Free writing <span style="color:brown;">"Brain Storming"</span></ol>
+            <ol>Clustring <span style="color:brown;">"Mind Mapping"</span></ol>
+          </ul>
+          <h1 class="title">The paragraph</h1>
+          <p>Group of related sentence about one topic.</p>
+          <strong>Notes :-</strong>
+          <p class="notes"><strong>Unity : </strong>all sentence about one topic</p>
+          <p class="notes"><strong>Coherence : </strong>All sentences lead to next one without <span style="color:red;"> Jumps or Gaps</span> and using <span style="color:rgb(20, 197, 17)">[ Linking Words , Transition Signals ].</span></p>
+          <div class="mal7osa"><p class="notes"> <strong style="color: red;">OFF-TOPIC-SENTENCE : </strong> irreletive sentence</p> <p class="mal7osa-exp">متكتبش هري ملهوش معني في نص الكلام</p></div>
+        </div>
+      </li>
+      <li class="expandable-item">
+        <div class="expandable-title">Sec 1</div>
+        <div class="expandable-content">Soon</div>
+      </li>
+      <li class="expandable-item">
+        <div class="expandable-title">FINAL</div>
+        <div class="expandable-content">Say ان شاء الله</div>
+      </li>
+    </ul>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const expandableTitles = document.querySelectorAll('.expandable-title');
+    
+        expandableTitles.forEach(title => {
+          title.addEventListener('click', () => {
+            title.parentNode.classList.toggle('expanded');
+          });
+        });
+      });
+    </script>
+</body>
+</Html>
+

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<Html lang="en">
+<meta charset="Utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  .expandable-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .expandable-item {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  .expandable-title {
+  padding: 10px;
+  background-color: #f3f3f3;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.expandable-content {
+  padding: 10px;
+  display: none;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+  .expandable-item.expanded .expandable-content {
+    display: block;
+  }
+
+  body {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+  }
+
+  nav {
+    background-color: #0d126e;
+    border: 15px;
+    border-radius: 20px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 0 19px;
+  }
+
+  nav ul li a {
+    color: #ffcf20;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+
+  .A1 {
+    font-size: 30px;
+    color: rgb(102, 59, 151);
+  }
+
+  div .highlite {
+    color: #ffcf20
+  }
+
+  .A2 {
+    width: 50%;
+    /* Adjust the width as needed */
+    float: left;
+    /* Float the paragraph to the left */
+    padding: 20px;
+    /* Optional: Add padding for better readability */
+    box-sizing: border-box;
+    display: block;
+    font-size: 90px;
+    color: #0c116d;
+    font-family: fantasy;
+  }
+
+  h1 .A0 {
+    color: rgb(102, 59, 151);
+    display: inline-block;
+  }
+
+  .moved-image {
+    width: 50%;
+    /* Adjust the width of the image column */
+  }
+
+  .A2 p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .A3 {
+    background-color: blue;
+
+  }
+
+  /* Styles for screens smaller than 600px */
+  @media (max-width: 600px) {
+    /* CSS rules for small screens */
+  }
+
+  /* Styles for screens between 601px and 900px */
+  @media (min-width: 601px) and (max-width: 900px) {
+    /* CSS rules for medium screens */
+  }
+
+  /* Styles for screens larger than 901px */
+  @media (min-width: 901px) {
+    /* CSS rules for large screens */
+  }
+
+  .A4 {
+    font-size: 30px;
+    margin-left: 700px;
+  }
+
+  .A5 {
+    margin-right: 1230px;
+  }
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 25vh; 
+    color:red;
+  }
+  .with-arrow {
+    position: relative;
+    padding-left: 20px; /* Adjust as needed */
+}
+
+.with-arrow::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 15px solid transparent; /* Adjust size as needed */
+    border-bottom: 15px solid transparent; /* Adjust size as needed */
+    border-left: 15px solid rgb(253, 0, 0); /* Adjust color and size as needed */
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.identify-Thermo{
+  color:rgb(255, 72, 0);
+}
+.State-Variables{
+  display:flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.State-Variables-Exp{
+  color: brown;
+}
+.bold{
+  color: red;
+}
+.T{
+  border: solid red ;
+  padding: 5px 10px 5px 10px;
+}
+.X{
+  border: solid rgb(0, 0, 0) ;
+  padding: 10px 20px 10px 20px;
+}
+.Notes{
+  display:flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.Notes-Exp{
+  color: brown;
+}
+.Ared{
+  color: red;
+}
+.Bgreen{
+  color: green;
+}
+.Cblue{
+  color: blue;
+}
+.Zero-Law-Exp{
+  text-align: right;
+  color:brown;
+  margin: 0;
+}
+.Temp-title{
+  margin-top: 50px;
+  font-size: 50px;
+  color:#bb6a00;
+}
+.Volume-costant{
+  display:flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.Volume-costant-exp{
+  color: brown;
+}
+.for-line{
+  display:flex;
+  justify-content: space-between;
+  height: 10vh;
+}
+.for-line-exp{
+  color: brown;
+}
+.proof-alpha{
+  border: solid red;
+  padding-left: 10px;
+}
+
+</style>
+
+<head>
+  <title>JUSTforHELP</title>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li class="A1"> <a href="Home.HTML"><i class="fa-solid fa-building-columns"></i></a></li>
+      <li><a href="Calculu I.html">Calculus I</a></li>
+      <li><a href="Academic Writing.html">Academic Writing</a></li>
+      <li><a href="Advanced Physics.html">Advanced Physics</a></li>
+      <li><a href="Problem Solving.html">Problem Solving</a></li>
+      <li><a href="Enterpreneurship S.html">Enterpreneurship S</a></li>
+      <li><a href="Discrete Structures.html">Discrete Structures</a></li>
+      <li class="A1"><a href="thx-for-ur-help.html"><i class="fa-solid fa-hand-holding-heart"></i></a></li>
+    </ul>
+  </nav>
+
+  <ul class="expandable-list">
+    <li class="expandable-item">
+      <div class="expandable-title">Lect 1</div>
+      <div class="expandable-content">
+      <h1 class="title">Thermodynamic Physics</h1>
+      <p>first you have to know what "Thermodynamic" mean. </p>
+      <p class="identify-Thermo"> Thermo <span class="with-arrow"></span> Heat energy <strong>(Q)</strong>.</p>
+      <p class="identify-Thermo"> dynamic <span class="with-arrow"></span> Work <strong>(W)</strong>.</p>
+      <p>Then</p>
+      <div class="State-Variables"><p> <strong class="bold">State Variables</strong> like :- Temp,Pressure,Volume</p><p class="State-Variables-Exp">Properties of system</p></div>
+      <div class="State-Variables"><p> <strong class="bold">Transfer Variables</strong><span class="T">T1</span> to <span class="T">T2</span> </p><p class="State-Variables-Exp">From state to another</p></div>
+      <h2>Take Notes</h2>
+      <div class="Notes"><p><strong class="bold">Thermal contact</strong></p><p class="Notes-Exp">الكبير بيدي الصغير</p></div>
+      <div class="State-Variables"><p><span class="X">X1</span> (>)to <span class="T">X2</span> </p></div>
+      <div class="Notes"><p><strong class="bold">Thermal equilibrium</strong></p><p class="Notes-Exp"> <strong>حالة الاتزان الحرارة</strong>:حيث لا يحدث انتقال في الطاقة</p></div>
+      <div class="State-Variables"><p><span class="T">X1</span> (=)equal <span class="T">X2</span> </p></div>
+      <h1 class="title">Start</h1>
+      <div><strong>Zero's Law of Thermodynamic : </strong><p>If we have 3 objects <strong>[<span class="Ared">A</span>,<span class="Bgreen">B</span>,<span class="Cblue">C</span>] </strong> if [<span class="Ared">A</span>&<span class="Bgreen">B</span>] heve Thermal equilibrium AND [<span class="Ared">A</span>&<span class="Cblue">C</span>] also have Thermal equilibrium SO [<span class="Bgreen">B</span>&<span class="Cblue">C</span>] have THERMAL EQUILIBRIUM .....XD</p></div>
+      <p class="Zero-Law-Exp">انا عارف انها بديهيات بس معلش خليك انت الكبير.</p>
+      <div class="Temp-title"><strong class="Temp-title">Temprature <i class="fa-solid fa-temperature-low"></i></strong></div>
+      <p><strong>(1)- Liquad in glass </strong><span class="Ared"> [ Mercury or Alcohol ] </span> </p>
+      <h2>Note</h2>
+      <div>Ice_Water temp 0&deg;C</div>
+      <div>Steam_Water temp 100&deg;C</div>
+      <div>Mercury can't get <span class="Ared"> Less </span> than -39&deg;C</div>
+      <div>Mercury can't get <span class="Bgreen"> More </span> than 85&deg;C</div>
+      <p><strong>(2)- Volume constant thermo </strong></p>
+      <div class="Volume-costant"><p>P = P<sub>o</sub> + &rho;gh</p> <p class="Volume-costant-exp">( Po = 1.013*10<sup>5</sup>) ( &rho; of water = 1000 ) ( g = 9.8 )</p></div>
+      <p>Before we talk about types of temp we need to notice that <strong class="Ared"> Absolute Value is = 273.15&deg;C </strong> <strong> When P & V = 0</strong></p>
+      <div>
+      <p><strong class="Temp-title">There is 3 types of TEMP</strong></p>
+      <p><strong class="Ared">T<sub>k</sub> or T that stand for Kelvin TEMP</strong></p>
+      <p><strong class="Bgreen">T<sub>c</sub> that stand for celsius TEMP</strong></p>
+      <p><strong class="Cblue">T<sub>f</sub> that stand for fahrenheit TEMP</strong></p>
+      <p>T<sub>k</sub> = T = 273.15&deg; + T<sub>c</sub></p>
+      <p>T<sub>f</sub> = 9/5 T<sub>c</sub> + 32</p>
+      <p>&Delta;T<sub>c</sub> = &Delta;T<sub>k</sub></p>
+      </div>
+    </div>
+    </li>
+    <li class="expandable-item">
+      <div class="expandable-title">LAB 1</div>
+      <div class="expandable-content">
+        <p><strong>&alpha; = &Delta;X / Lo * &Delta;T </strong></p>
+        <p><strong>&alpha; = &Delta;X / 500 * &Delta;T</strong></p>
+      </div>
+    </li>
+    <li class="expandable-item">
+      <div class="expandable-title">Lect 2</div>
+      <div class="expandable-content">
+      <h1 class="title">Thermal expansion</h1>
+      <P>first we have to know that (Every material has its own coefficient of expansion <strong class="Ared"> &alpha; </strong>)</P>
+      <P><strong class="Ared"> &alpha; </strong> = &deg;C<sup>-1</sup></P>
+      <P><strong class="Ared"> &alpha; </strong> = &Delta;L / &Delta;T * L<sub>i</sub></P>
+      <div>
+        <details>
+            <summary>Proof</summary>
+            <div class="proof-alpha">
+                <p>&Delta;L / L<sub>i</sub> &alpha; &Delta;T</p>
+                <i class="fa-solid fa-arrow-down"></i>
+                <p>&Delta;L / L<sub>i</sub> = &alpha; &Delta;T</p>
+            </div>
+        </details>
+      </div>
+      <div class="for-line">
+        <p>&Delta;L = &alpha; L<sub>i</sub> &Delta;T</p>
+        <p class="for-line-exp">لما تتعامل مع طول عادي</p>
+      </div>
+      <div class="for-line">
+        <p>&Delta;A = 2*&alpha; A<sub>i</sub> &Delta;T</p>
+        <p class="for-line-exp">لما تتعامل مع مساحات</p>
+      </div>
+      <div class="for-line">
+        <p>&Delta;V = 3*&alpha; V<sub>i</sub> &Delta;T</p>
+        <p class="for-line-exp">لما تتعامل مع حجوم</p>
+      </div>
+      <p>3*<span class ="Ared">&alpha;</span> = <span class = "Cblue">&beta;</span></p>
+      <div class="for-line">
+        <strong>Note :-</strong>
+        <strong class="for-line-exp">خلي بالك كويس ايه المعطيات اللي معاك عشان تحدد هتستخدم قانون ايه</strong>
+      </div>
+      <h1 class="title">Heat energy (Q)</h1>
+      <div class="for-line">
+        <p><strong>Heat capacity : </strong> C = Q/&Delta;T</p>
+        <p class="for-line-exp"> J/&deg;C</p>
+      </div>
+      <div class="for-line">
+        <p><strong>Spacific heat : </strong> c = Q/&Delta;T.M</p>
+        <p class="for-line-exp"> J/Kg.&deg;C</p>
+      </div>
+      <strong>Q = M.c.&Delta;T</strong>
+      <h1 class="title">Calorimetry</h1>
+      <h3 style="text-align: right;">بتخلط جسم بارد مع جسم سخن</h3>
+      <Strong><p><span style="color:rgb(6, 206, 206);">Q<sub>cold</sub></span> = -<span style="color: red;">Q<sub>hot</sub></span></p></Strong>
+      <Strong><p><span style="color:rgb(6, 206, 206);">(M.c.&Delta;T)</span> = - <span style="color: red;">(M.c.&Delta;T)</span></p></Strong>
+      <Strong><p><span style="color:rgb(6, 206, 206);">(M.c.&Delta;T)</span> + <span style="color: red;">(M.c.&Delta;T)</span> = 0</p></Strong>
+      </div>
+    </li>
+    <li class="expandable-item">
+      <div class="expandable-title">LAB 2</div>
+      <div class="expandable-content">
+        <h1 class="title">Some Notes and Ex</h1>
+        <Strong><p><span style="color:rgb(197, 47, 177)">If</span>(<span style="color:rgb(37, 177, 212)">&Delta;T<sub>k</sub></span> == <span style="color:rgb(37, 177, 212)">&Delta;T<sub>c</sub></span> && <span style="color:rgb(37, 177, 212)">&Delta;T<sub>c</sub></span> ==<span style="color:rgb(5, 211, 142)">9/5</span> <span style="color:rgb(37, 177, 212)">&Delta;T<sub>f</sub></span>)</p></Strong>
+        <Strong><p style="margin-left: 40px;"><span style="color:rgb(224, 191, 0)">printf</span><span style="color:#bb3804">(" T<sub>k</sub> = T<sub>c</sub> = 9/5 T<sub>f</sub>")</span></p></Strong>
+        <h3 style="text-align: right;"><i class="fa-regular fa-face-laugh-beam"></i> يا عم بهزر معاك متبقاش قفوش كدا </h3>
+      </div>
+    </li>
+    <li class="expandable-item">
+      <div class="expandable-title">Lect 3</div>
+      <div class="expandable-content">soon</div>
+    </li>
+    <li class="expandable-item">
+      <div class="expandable-title">LAB 3</div>
+      <div class="expandable-content">soon</div>
+    </li>
+    <li class="expandable-item">
+      <div class="expandable-title">FINAL</div>
+      <div class="expandable-content">Say ان شاء الله</div>
+    </li>
+  </ul>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const expandableTitles = document.querySelectorAll('.expandable-title');
+
+      expandableTitles.forEach(title => {
+        title.addEventListener('click', () => {
+          title.parentNode.classList.toggle('expanded');
+        });
+      });
+    });
+  </script>
+</body>
+
+</Html>

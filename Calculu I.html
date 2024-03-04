@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<Html lang="en">
+<meta charset="Utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  .expandable-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expandable-item {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.expandable-title {
+  padding: 10px;
+  background-color: #f3f3f3;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.expandable-content {
+  padding: 10px;
+  display: none;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+.expandable-item.expanded .expandable-content {
+  display: block;
+}
+body{
+  background:no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+}
+nav {
+  background-color: #0d126e;
+  border: 15px;
+  border-radius: 20px ;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+  
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 19px;
+}
+
+nav ul li a {
+  color: #ffcf20;
+  text-decoration: none;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #ffffff;
+}
+.A1{
+  font-size: 30px;
+  color: rgb(102, 59, 151);
+}
+div .highlite{
+  color : #ffcf20
+}
+.A2{
+  width: 50%; /* Adjust the width as needed */
+  float: left; /* Float the paragraph to the left */
+  padding: 20px; /* Optional: Add padding for better readability */
+  box-sizing: border-box;
+ display: block;
+ font-size: 90px;
+ color: #0c116d;
+ font-family:fantasy ;
+}
+h1 .A0 {
+  color: rgb(102, 59, 151);
+  display: inline-block;
+}
+.moved-image{
+  width: 50%; /* Adjust the width of the image column */
+}
+.A2 p {
+  margin-bottom: 5px; 
+  margin-top: 5px;
+}
+.A3{
+  background-color: blue;
+  
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Your CSS rules for small screens */
+}
+
+/* Styles for screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+    /* Your CSS rules for medium screens */
+}
+
+/* Styles for screens larger than 901px */
+@media (min-width: 901px) {
+    /* Your CSS rules for large screens */
+}
+.A4{
+ font-size: 30px;
+ margin-left: 700px;
+}
+.A5{
+  margin-right: 1230px;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  color:red;
+}
+.differentiation-rules{
+  display: flex;
+  justify-content: left;
+  align-items: left; 
+}
+.the-quotient-img{
+  width: 350px;
+  height: 300;
+}
+.normal p {
+  color:blue;
+}
+.inverse-trigonometric p {
+  color:red;
+}
+
+</style>
+<head>
+  <title>JUSTforHELP</title>
+</head>
+<body>
+  
+    <nav>
+         <ul>
+            <li class="A1"> <a href="Home.HTML"><i class="fa-solid fa-building-columns"></i></a></li>
+            <li><a href="Calculu I.html">Calculus I</a></li>
+            <li><a href="Academic Writing.html">Academic Writing</a></li>
+            <li><a href="Advanced Physics.html">Advanced Physics</a></li>
+            <li><a href="Problem Solving.html">Problem Solving</a></li>
+            <li><a href="Enterpreneurship S.html">Enterpreneurship S</a></li>
+            <li><a href="Discrete Structures.html">Discrete Structures</a></li>
+            <li class="A1"><a href="Thx For ur HELP.HTML"><i class="fa-solid fa-hand-holding-heart"></i></a></li>
+        </ul>
+    </nav>  
+    
+    <ul class="expandable-list">
+      <li class="expandable-item">
+        <div class="expandable-title">Lect 1</div>
+        <div class="expandable-content">
+          <h1 class="title">Differentiation rules</h1>
+          <h3>1. Constant Rule:</h3>
+<ul>
+  <li>If c is a constant, then dy/dx(c) = 0.</li>
+</ul>
+<h3>2. Power Rule:</h3>
+<ul>
+  <li>If f(x) = x<sup>n</sup>, where n is a constant, then f'(x) = nx<sup>n-1</sup>.</li>
+</ul>
+
+<h3>3. Sum/Difference Rule:</h3>
+<ul>
+  <li>If f(x) = g(x) + h(x), then (ƒ(x)) = g'(x) + h'(x).</li>
+</ul>
+<h3>4. Product Rule:</h3>
+<ul>
+  <li>If f(x) = g(x) • h(x), then (ƒ(x)) = g(x) • h'(x) + h(x) • g'(x).</li>
+</ul>
+<h3>5. Chain Rule:</h3>
+<ul>
+  <li>If y = f(u) and u = g(x), then the derivative of y with respect to x is given by dy/dx = f'(u) * u'(x).</li>
+</ul>
+<h3>6. Quotient Rule:</h3>
+<img class="the-quotient-img" src="the-quotient-rule-large.webp">
+<hr>
+<h1 class="title">Trigonometric functions</h1>
+      <div class="trigonometric-functions">
+<div class="normal">
+<h3>1. Sine Function:</h3>
+<p>(sin(x))' = cos(x)</p>
+
+<h3>2. Cosine Function:</h3>
+<p>(cos(x))' = -sin(x)</p>
+
+<h3>3. Tangent Function:</h3>
+<p>(tan(x))' = sec<sup>2</sup>(x)</p>
+
+<h3>4. Cosecant Function:</h3>
+<p>(csc(x))' = -csc(x) cot(x)</p>
+
+<h3>5. Secant Function:</h3>
+<p>(sec(x))' = sec(x) tan(x)</p>
+
+<h3>6. Cotangent Function:</h3>
+<p>(cot(x))' = -csc<sup>2</sup>(x)</p>
+</div>
+        </div>
+      </li>
+      <li class="expandable-item">
+        <div class="expandable-title">Sec 1</div>
+        <div class="expandable-content">same content</div>
+      </li>
+      <li class="expandable-item">
+        <div class="expandable-title">lect 2</div>
+        <div class="expandable-content">
+          <div class="inverse-trigonometric">
+            <h1 class="title">Inverse Trigonometric functions</h1>
+            <h3>1. Inverse Sine Function (arcsin):</h3>
+            <p>(sin<sup>-1</sup>(x))' = 1 / √(1 - x<sup>2</sup>)</p>
+            
+            <h3>2. Inverse Cosine Function (arccos):</h3>
+            <p>(cos<sup>-1</sup>(x))' = -1 / √(1 - x<sup>2</sup>)</p>
+            
+            <h3>3. Inverse Tangent Function (arctan):</h3>
+            <p>(tan<sup>-1</sup>(x))' = 1 / (1 + x<sup>2</sup>)</p>
+            
+            <h3>4. Inverse Cosecant Function (arccsc):</h3>
+            <p>(csc<sup>-1</sup>(x))' = -1 / (|x| √(x<sup>2</sup> - 1))</p>
+            
+            <h3>5. Inverse Secant Function (arcsec):</h3>
+            <p>(sec<sup>-1</sup>(x))' = 1 / (|x| √(x<sup>2</sup> - 1))</p>
+            
+            <h3>6. Inverse Cotangent Function (arccot):</h3>
+            <p>(cot<sup>-1</sup>(x))' = -1 / (1 + x<sup>2</sup>)</p>
+            </div>
+        </div>
+      </li>
+      <li class="expandable-item">
+        <div class="expandable-title">Sec 2</div>
+        <div class="expandable-content">same content</div>
+      </li>
+      <li class="expandable-item">
+        <div class="expandable-title">lect 3</div>
+        <div class="expandable-content">same content</div>
+      </li>
+      <li class="expandable-item">
+        <div class="expandable-title">Sec 3</div>
+        <div class="expandable-content">same content</div>
+      </li>
+      
+      <li class="expandable-item">
+        <div class="expandable-title">FINAL</div>
+        <div class="expandable-content">Say ان شاء الله</div>
+      </li>
+    </ul>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const expandableTitles = document.querySelectorAll('.expandable-title');
+    
+        expandableTitles.forEach(title => {
+          title.addEventListener('click', () => {
+            title.parentNode.classList.toggle('expanded');
+          });
+        });
+      });
+    </script>
+</body>
+</Html>
+
+
+
